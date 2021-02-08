@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"os"
 
 	"github.com/antoniodipinto/ikisocket"
 	"github.com/gofiber/fiber/v2"
@@ -132,5 +133,5 @@ func main() {
 		kws.Emit([]byte(fmt.Sprintf(`{"type": "notify", "data": "Hello user: %s with UUID: %s"}`, userID, kws.UUID)))
 	}))
 
-	app.Listen(":3000")
+	app.Listen(":" + os.Getenv("PORT"))
 }
