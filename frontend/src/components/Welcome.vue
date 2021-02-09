@@ -72,7 +72,8 @@ export default {
     },
     startWebSocket() {
       console.log("Starting connection to WebSocket Server");
-      this.connection = new WebSocket(`ws://127.0.0.1:3000/ws/${this.userId}`);
+      const socketURL = process.env.VUE_APP_SOCKET_URL
+      this.connection = new WebSocket(`${socketURL}/${this.userId}`);
 
       this.connection.onmessage = (event) => {
         this.onMessage(event.data);
