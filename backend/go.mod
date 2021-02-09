@@ -7,4 +7,6 @@ require (
 	github.com/gofiber/fiber/v2 v2.4.1 // indirect
 	github.com/gofiber/websocket/v2 v2.0.2
 	github.com/googollee/go-socket.io v1.4.4
+	github.com/mediocregopher/radix/v3 v3.7.0
+	github.com/vmihailenco/msgpack/v5 v5.2.0
 )
